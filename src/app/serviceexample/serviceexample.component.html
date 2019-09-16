@@ -1,0 +1,40 @@
+<div class="row">
+<div class="col-md-3">
+<h3>totalitem : {{itemlist.length}}</h3>
+<ul class="list-group">
+<li class="list-group-item active">data list from libservice</li>
+<li class="list-group-item" *ngFor="let x of itemlist">{{x}}</li>
+</ul>
+</div>
+
+<div class="col-md-3">
+  <h3>totaluser : {{userlist.length}}</h3>
+  <table class="table table-bordered">
+    <tr>
+      <th>username</th>
+      <th>age</th>
+    </tr>
+    <tr *ngFor="let row of userlist">
+<td>{{row.name}}</td>
+<td>{{row.age}}</td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="col-md-3">
+<h3>citylist:{{citylist.length}}</h3>
+<table class="table table-bordered">
+  <tr>
+    <th>cityname</th>
+    <th>population</th>
+  </tr>
+  <tr *ngFor="let row of citylist">
+<td>{{row.name}}</td>
+<td>{{row.popu}}</td>
+  </tr>
+</table>
+  </div>
+
+
+
+</div>

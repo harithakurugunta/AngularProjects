@@ -1,0 +1,13 @@
+<div class="z">
+<div class="col-md-12">
+<h3 class="text-danger"><b>component interaction example</b></h3>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3">
+<app-child1 [mycar]="car" (eachcar)="passtoparent($event)"></app-child1>
+</div>
+<div class="col-md-9">
+<app-child2 [mycardetails]="cardetails"></app-child2>
+</div>
+</div>

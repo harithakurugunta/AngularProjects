@@ -1,0 +1,24 @@
+<h3>array 2 example</h3>
+<table class="table table-bordered">
+  <tr>
+    <th>name</th>
+    <th>age</th>
+    <th>salary</th>
+    <th>action</th>
+  </tr>
+  <tr>
+    <td><input type="text" class="form-control" [(ngModel)]="fname" #sname></td>
+    <td><input type="text" class="form-control" [(ngModel)]="fage" #sage></td>
+    <td><input type="text" class="form-control" [(ngModel)]="fsalary" #ssalary></td>
+    <td><button class="btn btn-success" (click)="save(sname.value,sage.value,ssalary.value)">save</button></td>
+    
+  </tr>
+  <tr *ngFor="let x of user">
+      <td>{{x.name}}</td>
+      <td>{{x.age}}</td>
+      <td>{{x.salary}}</td>
+    <td>
+      <button class="btn btn-danger"> <i class="glyphicon glyphicon-trash"></i></button>
+    </td>
+  </tr>
+</table>

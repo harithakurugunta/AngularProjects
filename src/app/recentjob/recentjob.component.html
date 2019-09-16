@@ -1,0 +1,25 @@
+<h1 class="text-center">
+  total jobs:{{alldesignation.length}}
+</h1><br>
+<div class="row">
+  <div class="col-md-3 form-group" *ngFor="let row of alldesignation">
+    {{row.designation_name}}
+  </div>
+</div>
+<h1 class="text-center">
+   all jobs:{{alljob.length}}
+  </h1>
+  <div class="row">
+    <div class="col-md-5">
+     <table class="table table-bordered">
+<tr>
+  <th>job index</th>
+  <th>job title</th>
+</tr>
+<tr *ngFor="let row of alljob;let i=index;">
+<td>{{i}}</td>
+<td>{{row.jobtitle}}</td>
+</tr>
+     </table>
+    </div>
+  </div>

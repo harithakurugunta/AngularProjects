@@ -1,0 +1,94 @@
+<div class="row text-center">
+  <div class="col-md-12">
+    <h3 class="text-danger">signup</h3>
+ </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6"> 
+    <form [formGroup]="myform" (ngSubmit)="savemessage()">
+      <div class="form-group">
+        <label>full name </label>
+        <input type="text" class="form-control input-sm" formControlName="fname">
+        <div *ngIf="pagesubmit && myform.controls.fname.errors"><!--controls insense fname email and msg-->
+          <p *ngIf="myform.controls.fname.errors.required" class="text-danger">
+            please enter your name !
+          </p>
+          
+        </div>
+      </div><!--form-groupend-->
+      <div class="form-group">
+          <label>email-id</label>
+          <input type="text" class="form-control input-sm" formControlName="emailid">
+          <div *ngIf="pagesubmit && myform.controls.emailid.errors"><!--controls insense fname email and msg-->
+            <p *ngIf="myform.controls.emailid.errors.required" class="text-danger">
+              please enter your email id !
+            </p>
+            <p *ngIf="myform.controls.emailid.errors.email" class="text-danger">
+                this is not valid email id
+              </p>
+          </div>
+        </div><!--group end-->
+       
+        <div class="form-group">
+          <label>mobile</label>
+          <input type="text" class="form-control input-sm" formControlName="mobile">
+          <div *ngIf="pagesubmit && myform.controls.mobile.errors"><!--controls insense fname email and msg-->
+            <p *ngIf="myform.controls.mobile.errors.required" class="text-danger">
+              please enter your mobile number
+            </p>
+            <p *ngIf="myform.controls.mobile.errors.minlength" class="text-danger">
+                mobile number must be 10 digits
+              </p>
+              <p *ngIf="myform.controls.mobile.errors.maxlength" class="text-danger">
+                mobile number must be 10 digits
+              </p>
+          </div>
+        </div><!--group end-->
+
+        <div class="form-group">
+          <label>password</label>
+          <input type="text" class="form-control input-sm" formControlName="password">
+          <div *ngIf="pagesubmit && myform.controls.password.errors"><!--controls insense fname email and msg-->
+            <p *ngIf="myform.controls.password.errors.required" class="text-danger">
+              please enter your password !
+            </p>
+            
+          </div>
+        </div><!--group end-->
+
+        <div class="form-group">
+          <label>confirm-password</label>
+          <input type="text" class="form-control input-sm" formControlName="confirmpassword">
+          <div *ngIf="pagesubmit && myform.controls.confirmpassword.errors"><!--controls insense fname email and msg-->
+            <p *ngIf="myform.controls.confirmpassword.errors.required" class="text-danger">
+              please enter your confirm password!
+            </p>
+            <p *ngIf="myform.controls.confirmpassword.errors.mismatch" class="text-danger">
+             password && confirm password doesnot match!
+            </p>
+            
+          </div>
+        </div><!--group end-->
+
+        <div class="form-group">
+          <label>message</label>
+          <textarea class="form-control" formControlName="msg"></textarea>
+          <div *ngIf="pagesubmit && myform.controls.msg.errors"><!--controls insense fname email and msg-->
+            <p *ngIf="myform.controls.msg.errors.required" class="text-danger">
+              please enter your message !
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary">save</button>
+          &nbsp;&nbsp;
+          <button type="reset" class="btn btn-danger">clear</button>
+
+        </div>
+    </form>
+
+  </div><!--6 end here-->
+  <div class="col-md-3"> </div>
+</div>

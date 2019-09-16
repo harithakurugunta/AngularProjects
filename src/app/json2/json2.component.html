@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-8">
+    <h3 class="text-center">{{totalitem}}</h3>
+     </div>
+     <div class="col-md-4">
+      <br>
+      <input type="text" class="form-control inputsm" placeholder="search here" [(ngModel)]="searchkey">
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-3 form-group" *ngFor="let row of itemlist |filter:searchkey | paginate: { itemsPerPage: 4, currentPage: r }">
+<h5>Full name:{{row.name}}</h5>
+<p>e-Mail:{{row.email}}</p>
+<p>Mobile:{{row.mobile}}</p>
+<p>city:{{row.city}}</p>
+<hr>
+  </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 text-center"><pagination-controls (pageChange)="r = $event"></pagination-controls></div>
+    </div>

@@ -1,0 +1,25 @@
+<table class="table table-bordered table-hover">
+  <caption class="text-center"><h2>Car Details</h2></caption>
+  <tbody *ngIf="cardata">
+  <tr>
+    <th rowspan="2" width="40%">
+      <img src="http://cybotrix.com/ios/img/{{cardata.image}}" style="height: 230px; width: 200px;">
+    </th>
+  </tr>
+  <tr>
+    <th colspan="2">{{cardata.model}}</th>
+  </tr>
+  <tr>
+    <th>Price</th>
+    <td>{{cardata.price}}</td>
+  </tr>
+  <tr>
+      <th>Model</th>
+      <td colspan="2">{{cardata.model}}</td>
+    </tr>
+    <tr>
+        <th>Fuel Type</th>
+        <td colspan="2">{{cardata.fuelType}}</td>
+      </tr>
+    </tbody>   
+</table>

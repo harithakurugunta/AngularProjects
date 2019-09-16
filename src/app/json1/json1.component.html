@@ -1,0 +1,23 @@
+<div class="row">
+ <div class="col-md-12 text-center">
+   <h3 class="text-center">total itemis:{{total1}}</h3>
+ </div>
+</div>
+<div class="row">
+    <div class="col-md-2 form-group" *ngFor="let xitem of item1">
+        <p class="well">{{xitem}}</p>
+    </div>
+</div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="text-center">{{total2}}</h3>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-md-2 form-group" *ngFor="let row of item2">
+       <p>item name: {{row.name}}</p>
+       <p>item qty: {{row.qty}}</p>
+       <p>item price: {{row.price}}</p>
+      </div>
+    </div>
+  

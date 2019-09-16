@@ -1,0 +1,31 @@
+<h3>array2 example</h3>
+<table class="table table-bordered">
+  <tr>
+    <td>name</td>
+    <td>age</td>
+    <td>city</td>
+    <td>action</td>
+  </tr>
+  <tr>
+    <td><input type="text" #sname class="form-control input-sm" placeholder="name" [(ngModel)]="iname" ></td>
+    <td><input type="text"  #sage class="form-control input-sm" placeholder="age" [(ngModel)]="iage" ></td>
+    <td><input type="text"  #scity class="form-control input-sm" placeholder="city" [(ngModel)]="icity" ></td>
+    <td><button class="btn btn-success" (click)="saveuser(sname.value,sage.value,scity.value)">save</button></td>
+  </tr>
+  <tr *ngFor="let x of myuser; let i=index;">
+    <td>{{x.name}}</td>
+    <td>{{x.age}}</td>
+    <td>{{x.city}}</td>
+    <td>
+      <button class="btn btn-danger btn-sm" (click)="deluser(i)">
+        <i class="glyphicon glyphicon-trash"></i>
+
+
+      </button>
+    </td>
+
+  </tr>
+
+</table>
+
+
